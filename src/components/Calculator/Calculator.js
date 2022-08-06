@@ -14,15 +14,17 @@ export default function Calculator() {
 
     for (let i = 1; i <= parseInt(number); i++) {
       if (i === 1) {
-        fibSequenceMap[i] = 0;
+        fibSequenceMap[0] = 0;
       } else if (i === 2) {
-        fibSequenceMap[i] = 1;
+        fibSequenceMap[1] = 1;
       } else {
-        fibSequenceMap[i] = parseInt(fibSequenceMap[i - 1]) + parseInt(fibSequenceMap[i - 2]);
+        fibSequenceMap[2] = parseInt(fibSequenceMap[0]) + parseInt(fibSequenceMap[1]);
+        fibSequenceMap[0] = fibSequenceMap[1];
+        fibSequenceMap[1] = fibSequenceMap[2];
       }
     }
 
-    setAnswer(fibSequenceMap[parseInt(number)]);
+    setAnswer(fibSequenceMap[2]);
   };
 
   const handleAllClear = () => {
