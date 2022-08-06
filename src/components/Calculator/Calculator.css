@@ -8,7 +8,6 @@
 .input {
   background: gray;
   flex-basis: 100%;
-  width: 110px;
   height: 80px;
   display: flex;
   justify-content: center;
