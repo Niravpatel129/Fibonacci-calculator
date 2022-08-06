@@ -27,6 +27,7 @@ export default function Calculator() {
 
   const handleAllClear = () => {
     setNumber('');
+    setAnswer('');
   };
 
   return (
