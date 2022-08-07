@@ -9,7 +9,7 @@ export default function Calculator() {
     setNumber(number + e.target.innerText);
   };
 
-  const handleCalculate = (e) => {
+  const handleCalculate = () => {
     const fibSequenceMap = {};
 
     for (let i = 1; i <= parseInt(number); i++) {
